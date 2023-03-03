@@ -1,0 +1,13 @@
+<%= form_with :url => contact_path, method: "post" do |form| %>
+  <div>
+    <%= form.label :name, "Name" %>
+    <%= form.text_field :name, :autofocus => true %>
+  </div>
+  <div>
+    <%= form.label :message, "Message" %>
+    <%= form.text_area :message %>
+  </div>
+  <div>
+    <%= form.submit "Submit", :data => {:disable_with => "Submitting..."} %>
+  </div>
+<% end %>
